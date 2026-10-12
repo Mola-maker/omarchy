@@ -1,0 +1,1 @@
+Read-only independent code review: no blocking findings. Exact PNG/SVG/XPM filename cleanup preserves legacy PNG paths. Reviewer independently verified spaces, glob characters, same-stem other extensions, neighboring icons, and backups. Production code unchanged after review.

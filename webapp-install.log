@@ -1,0 +1,9 @@
+ok - webapp install writes an https desktop entry
+ok - webapp install names the window Chromium opens, so titlebars can show the app's name
+ok - web app window classes follow Chromium's host and path naming
+ok - webapp install prefixes a schemeless URL with https
+ok - webapp install keeps a custom https exec
+ok - webapp install refuses non-http(s) URLs
+ok - webapp install refuses a URL carrying whitespace
+ok - webapp install accepts an uppercase http scheme
+ok - interactive webapp install refuses a bad URL before fetching it

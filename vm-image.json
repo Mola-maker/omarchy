@@ -1,0 +1,28 @@
+{
+  "version": "2026.10.12.442",
+  "channel": "edge",
+  "built_at": "2026-10-12T04:25:18Z",
+  "url": "https://nightly.omarchy.org/edge/2026.10.12.442/omarchy-edge-2026.10.12.442.iso",
+  "sha256": "6d1decc326b473f121549260d361bf9a3ccc31197d9e1386120883c4e67912e5",
+  "size": 6442207232,
+  "iso_commit": "53b80d406cdcb56cd757562e0f31d2c13cb57f47",
+  "omarchy_version": "4.0.0.r6911.g9480d1b-1",
+  "omarchy_commit": "9480d1b",
+  "kernel": "7.2.8-5-omarchy-bore",
+  "vm": {
+    "url": "https://nightly.omarchy.org/edge/2026.10.12.442/omarchy-edge-2026.10.12.442.qcow2",
+    "sha256": "7ed0bd351861bce80c43434a9fb48fe6058dc12dbdb0bde2b14e59d7fe9d4110",
+    "size": 4530438144,
+    "unpacked": "https://nightly.omarchy.org/edge/2026.10.12.442/unpacked/",
+    "unpacked_files": [
+      "vmlinuz",
+      "initrd",
+      "cmdline",
+      "vm-boot",
+      "SHA256SUMS"
+    ],
+    "user": "omarchy",
+    "password": "omarchy",
+    "ssh": "keys only; vm-boot makes one for each boot"
+  }
+}

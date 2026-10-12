@@ -1,0 +1,5 @@
+ok - Exec escapes the backslash its own quoting introduced
+ok - a URL containing a dollar sign reaches the browser unchanged
+ok - a percent-encoded URL reaches the browser unchanged
+ok - a backslash in the app name is escaped
+ok - a newline in the app name cannot inject a second Exec

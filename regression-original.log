@@ -1,0 +1,8 @@
+ok - webapp install rejects a name that would nest the launcher
+ok - webapp install refuses a name that would escape the applications directory
+ok - webapp install refuses a slashed name before fetching its icon
+ok - webapp install and remove round-trip an ordinary name
+ok - webapp remove reaches a nested legacy launcher
+ok - webapp remove stays quiet when there is no applications directory
+ok - webapp remove cleans up its local png icon and preserves neighboring icons
+not ok - webapp remove deletes its local svg icon

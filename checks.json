@@ -1,0 +1,14 @@
+{
+  "base_commit": "defbf90e893e741067e48f4a27d2ec694c71358e",
+  "branch": "fix/webapp-local-icon-cleanup",
+  "cli_exit_code": 0,
+  "cli_assertions": 117,
+  "webapp_assertions": 23,
+  "metadata_commands": 509,
+  "runtime_before_residual_icons": 2,
+  "runtime_after_residual_icons": 0,
+  "candidate_sha256": "9e778dc4de3ca6b6ded8708e82cfa69dac0ac13d904f14a4c0ee61726b4034c9",
+  "screenshots": "Unmodified PNGs saved by omarchy capture screenshot fullscreen save inside the running KVM guest.",
+  "full_repository_suite": "Not claimed green: Ubuntu baseline had missing desktop dependencies and a blocked namespace probe.",
+  "candidate_commit": "28d84db99a532f7a67b821c63564ccc84b24c366"
+}

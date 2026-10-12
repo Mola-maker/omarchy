@@ -1,0 +1,20 @@
+Running as unit: run-p23564-i25729.service
+Omarchy web app icon cleanup: BEFORE
+Kernel: 7.2.8-5-omarchy-bore
+omarchy-dev 4.0.0.r6911.g9480d1b-1
+git 2.56.0-1
+gtk3 1:3.24.52-2
+desktop-file-utils 0.28-1
+
+Real install and remove commands, no command stubs
+PNG: launcher removed; icon removed; neighbor preserved
+SVG: launcher removed; icon LEFT BEHIND; neighbor preserved
+XPM: launcher removed; icon LEFT BEHIND; neighbor preserved
+
+Residual app icons: 2
+Original bug reproduced: SVG and XPM icons remain.
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 160ms
+             CPU time consumed: 129ms
+                   Memory peak: 4.7M (swap: 0B)
