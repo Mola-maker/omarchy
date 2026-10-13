@@ -1,0 +1,16 @@
+bash 5.3.20-1
+coreutils 9.12-2
+systemd 262-1
+jq 1.8.2-1
+python 3.14.8-1
+foot 1.28.0-2
+wtype 0.4-2
+gawk 5.4.1-1
+
+Node: v26.11.1
+
+New runtime dependencies: none; all command and test dependencies available in official image.
+
+Baseline SHA256: 1c43da0ad54ff06a5dfa14af62bded6b17d9a15550094a717230b5af9ad8de12  before/bin/omarchy-reminder
+
+Candidate SHA256: ece29338beeab2481e5617ed97ed83c2ede17cbb21234844651504f65269ed4f  after/bin/omarchy-reminder

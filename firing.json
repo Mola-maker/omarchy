@@ -1,0 +1,43 @@
+{
+  "initial_listing": {
+    "count": 2,
+    "active": true,
+    "tooltip": "2 reminders",
+    "reminders": [
+      {
+        "unit": "omarchy-reminder-1m-1791875231-ptGv8k",
+        "timer": "omarchy-reminder-1m-1791875231-ptGv8k.timer",
+        "minutes": 1,
+        "message": "Native firing verification",
+        "label": "Native firing verification",
+        "remaining": "1m",
+        "remainingSeconds": 60,
+        "at": 1791875291,
+        "atTime": "7:08"
+      },
+      {
+        "unit": "omarchy-reminder-1m-1791875231-Zg21Nm",
+        "timer": "omarchy-reminder-1m-1791875231-Zg21Nm.timer",
+        "minutes": 1,
+        "message": "",
+        "label": "1-min reminder",
+        "remaining": "1m",
+        "remainingSeconds": 60,
+        "at": 1791875291,
+        "atTime": "7:08"
+      }
+    ]
+  },
+  "elapsed_seconds": 61.51879866399997,
+  "delivered_reminder_bodies": [
+    "Native firing verification",
+    "Your 1 minutes are up"
+  ],
+  "message_files_removed": true,
+  "after_firing": {
+    "count": 0,
+    "active": false,
+    "tooltip": "Set Reminder",
+    "reminders": []
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "calls": [
+    {
+      "message": "Parallel native reminder 1",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 2",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 3",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 4",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 5",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 6",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 7",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 8",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 9",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 10",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 11",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "message": "Parallel native reminder 12",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "listing": {
+    "count": 12,
+    "active": true,
+    "tooltip": "12 reminders",
+    "reminders": [
+      {
+        "unit": "omarchy-reminder-10m-1791875004-KIhxE1",
+        "timer": "omarchy-reminder-10m-1791875004-KIhxE1.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 4",
+        "label": "Parallel native reminder 4",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-2tFbcZ",
+        "timer": "omarchy-reminder-10m-1791875004-2tFbcZ.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 1",
+        "label": "Parallel native reminder 1",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-i849vL",
+        "timer": "omarchy-reminder-10m-1791875004-i849vL.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 2",
+        "label": "Parallel native reminder 2",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-oRbt5s",
+        "timer": "omarchy-reminder-10m-1791875004-oRbt5s.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 6",
+        "label": "Parallel native reminder 6",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-Jmrrec",
+        "timer": "omarchy-reminder-10m-1791875004-Jmrrec.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 7",
+        "label": "Parallel native reminder 7",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-FuvsMz",
+        "timer": "omarchy-reminder-10m-1791875004-FuvsMz.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 3",
+        "label": "Parallel native reminder 3",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-lFCaUk",
+        "timer": "omarchy-reminder-10m-1791875004-lFCaUk.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 8",
+        "label": "Parallel native reminder 8",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-DYtDjf",
+        "timer": "omarchy-reminder-10m-1791875004-DYtDjf.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 5",
+        "label": "Parallel native reminder 5",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-OVNQ2A",
+        "timer": "omarchy-reminder-10m-1791875004-OVNQ2A.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 9",
+        "label": "Parallel native reminder 9",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-PvB7Ig",
+        "timer": "omarchy-reminder-10m-1791875004-PvB7Ig.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 10",
+        "label": "Parallel native reminder 10",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-4UEY6F",
+        "timer": "omarchy-reminder-10m-1791875004-4UEY6F.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 12",
+        "label": "Parallel native reminder 12",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791875004-wmjli0",
+        "timer": "omarchy-reminder-10m-1791875004-wmjli0.timer",
+        "minutes": 10,
+        "message": "Parallel native reminder 11",
+        "label": "Parallel native reminder 11",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875604,
+        "atTime": "7:13"
+      }
+    ]
+  },
+  "after_clear": {
+    "count": 0,
+    "active": false,
+    "tooltip": "Set Reminder",
+    "reminders": []
+  }
+}

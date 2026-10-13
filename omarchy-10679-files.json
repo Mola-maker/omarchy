@@ -1,0 +1,38 @@
+[
+  {
+    "sha": "1d56b807bfba86bc633bd71e4ddb5731cc13f849",
+    "filename": "bin/omarchy-reminder",
+    "status": "modified",
+    "additions": 2,
+    "deletions": 1,
+    "changes": 3,
+    "blob_url": "https://github.com/omacom/omarchy/blob/4eee2f83172080d7cd911a0f91cf782c5647e925/bin%2Fomarchy-reminder",
+    "raw_url": "https://github.com/omacom/omarchy/raw/4eee2f83172080d7cd911a0f91cf782c5647e925/bin%2Fomarchy-reminder",
+    "contents_url": "https://api.github.com/repos/omacom/omarchy/contents/bin%2Fomarchy-reminder?ref=4eee2f83172080d7cd911a0f91cf782c5647e925",
+    "patch": "@@ -181,6 +181,7 @@ fi\n \n set_at=$(date +%s)\n remind_at=$(date -d \"+${minutes} minutes\" +%H:%M)\n+deadline=$(date -u -d \"+${minutes} minutes\" '+%Y-%m-%d %H:%M:%S UTC')\n unit=\"omarchy-reminder-${minutes}m-$set_at\"\n reminder_dir=\"${XDG_RUNTIME_DIR:-/tmp}/omarchy-reminders\"\n message_file=\"$reminder_dir/$unit.message\"\n@@ -194,7 +195,7 @@ if [[ -n $custom_message ]]; then\n   confirmation_title=\"$custom_message in ${minutes} minutes\"\n fi\n \n-systemd-run --user --quiet --collect --on-active=\"${minutes}m\" --unit=\"$unit\" \\\n+systemd-run --user --quiet --collect --on-calendar=\"$deadline\" --unit=\"$unit\" \\\n   bash -c 'omarchy-notification-send -g \udb82\udc8c \"Reminder\" \"$1\"; rm -f \"$2\"; omarchy-shell -q omarchy.indicators refresh >/dev/null 2>&1 || true' bash \"$message\" \"$message_file\"\n \n refresh_indicator"
+  },
+  {
+    "sha": "7a415bfa187a87ec1f6ea37d80feba4569a57cf1",
+    "filename": "docs/notifications.md",
+    "status": "modified",
+    "additions": 1,
+    "deletions": 1,
+    "changes": 2,
+    "blob_url": "https://github.com/omacom/omarchy/blob/4eee2f83172080d7cd911a0f91cf782c5647e925/docs%2Fnotifications.md",
+    "raw_url": "https://github.com/omacom/omarchy/raw/4eee2f83172080d7cd911a0f91cf782c5647e925/docs%2Fnotifications.md",
+    "contents_url": "https://api.github.com/repos/omacom/omarchy/contents/docs%2Fnotifications.md?ref=4eee2f83172080d7cd911a0f91cf782c5647e925",
+    "patch": "@@ -182,7 +182,7 @@ Everything goes through the same sender contract, so the pieces are small:\n \n Reminders ride on notifications rather than being their own daemon.\n `bin/omarchy-reminder <minutes> [message]` creates a transient systemd user\n-timer via `systemd-run --user --collect --on-active=<minutes>m` under the\n+timer via `systemd-run --user --collect --on-calendar=<absolute UTC deadline>` under the\n unit name `omarchy-reminder-<minutes>m-<epoch>`; the timer's payload sends the\n reminder toast, deletes its message file, and refreshes the bar indicator.\n Custom messages are stashed in `$XDG_RUNTIME_DIR/omarchy-reminders/<unit>.message`"
+  },
+  {
+    "sha": "21f3c24849349ec73cdbab726efb13eee075f8af",
+    "filename": "test/shell.d/reminders-test.sh",
+    "status": "modified",
+    "additions": 50,
+    "deletions": 0,
+    "changes": 50,
+    "blob_url": "https://github.com/omacom/omarchy/blob/4eee2f83172080d7cd911a0f91cf782c5647e925/test%2Fshell.d%2Freminders-test.sh",
+    "raw_url": "https://github.com/omacom/omarchy/raw/4eee2f83172080d7cd911a0f91cf782c5647e925/test%2Fshell.d%2Freminders-test.sh",
+    "contents_url": "https://api.github.com/repos/omacom/omarchy/contents/test%2Fshell.d%2Freminders-test.sh?ref=4eee2f83172080d7cd911a0f91cf782c5647e925",
+    "patch": "@@ -32,3 +32,53 @@ assertDeepEqual(\n   'reminders command args are empty for invalid minutes'\n )\n JS\n+\n+test_dir=$(mktemp -d)\n+trap 'rm -rf \"$test_dir\"' EXIT\n+mkdir -p \"$test_dir/bin\" \"$test_dir/runtime\"\n+\n+cat >\"$test_dir/bin/date\" <<'EOF'\n+#!/bin/bash\n+case \"$*\" in\n+\"+%s\") echo 1788804000 ;;\n+\"-d +7 minutes +%H:%M\") echo 11:07 ;;\n+\"-u -d +7 minutes +%Y-%m-%d %H:%M:%S UTC\") echo \"2026-09-07 18:07:00 UTC\" ;;\n+*) exit 1 ;;\n+esac\n+EOF\n+\n+cat >\"$test_dir/bin/systemd-run\" <<'EOF'\n+#!/bin/bash\n+printf '%s\\n' \"$@\" >\"$TEST_LOG\"\n+EOF\n+\n+for command in omarchy-notification-send omarchy-shell; do\n+  cat >\"$test_dir/bin/$command\" <<'EOF'\n+#!/bin/bash\n+exit 0\n+EOF\n+  chmod +x \"$test_dir/bin/$command\"\n+done\n+chmod +x \"$test_dir/bin/date\" \"$test_dir/bin/systemd-run\"\n+\n+TEST_LOG=\"$test_dir/systemd-run.log\" \\\n+  XDG_RUNTIME_DIR=\"$test_dir/runtime\" \\\n+  PATH=\"$test_dir/bin:$PATH\" \\\n+  bash \"$ROOT/bin/omarchy-reminder\" 7 \"Tea ready\"\n+\n+grep -Fxq -- '--on-calendar=2026-09-07 18:07:00 UTC' \"$test_dir/systemd-run.log\" ||\n+  fail \"reminder deadline uses wall-clock time\" \"systemd-run did not receive the absolute reminder deadline\"\n+pass \"reminder deadline uses wall-clock time\"\n+\n+if grep -q '^--on-active=' \"$test_dir/systemd-run.log\"; then\n+  fail \"reminder avoids an active-time delay\" \"$(<\"$test_dir/systemd-run.log\")\"\n+fi\n+pass \"reminder avoids an active-time delay\"\n+\n+grep -Fxq -- '--unit=omarchy-reminder-7m-1788804000' \"$test_dir/systemd-run.log\" ||\n+  fail \"reminder keeps its unit naming\" \"$(<\"$test_dir/systemd-run.log\")\"\n+pass \"reminder keeps its unit naming\"\n+\n+[[ $(<\"$test_dir/runtime/omarchy-reminders/omarchy-reminder-7m-1788804000.message\") == \"Tea ready\" ]] ||\n+  fail \"reminder keeps its custom message file\"\n+pass \"reminder keeps its custom message file\""
+  }
+]

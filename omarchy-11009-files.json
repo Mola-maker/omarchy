@@ -1,0 +1,38 @@
+[
+  {
+    "sha": "316db5d2a045c18a090d22de3d1f1a52d315175a",
+    "filename": "bin/omarchy-reminder",
+    "status": "modified",
+    "additions": 1,
+    "deletions": 1,
+    "changes": 2,
+    "blob_url": "https://github.com/omacom/omarchy/blob/994e798d4e9effcf78db431867ed12bc5c8e2646/bin%2Fomarchy-reminder",
+    "raw_url": "https://github.com/omacom/omarchy/raw/994e798d4e9effcf78db431867ed12bc5c8e2646/bin%2Fomarchy-reminder",
+    "contents_url": "https://api.github.com/repos/omacom/omarchy/contents/bin%2Fomarchy-reminder?ref=994e798d4e9effcf78db431867ed12bc5c8e2646",
+    "patch": "@@ -195,7 +195,7 @@ if [[ -n $custom_message ]]; then\n fi\n \n systemd-run --user --quiet --collect --on-active=\"${minutes}m\" --unit=\"$unit\" \\\n-  bash -c 'omarchy-notification-send -g \udb82\udc8c \"Reminder\" \"$1\"; rm -f \"$2\"; omarchy-shell -q omarchy.indicators refresh >/dev/null 2>&1 || true' bash \"$message\" \"$message_file\"\n+  bash -c 'omarchy-notification-send -g \udb82\udc8c \"Reminder\" \"$1\" -u critical; rm -f \"$2\"; omarchy-shell -q omarchy.indicators refresh >/dev/null 2>&1 || true' bash \"$message\" \"$message_file\"\n \n refresh_indicator\n omarchy-notification-send -g \udb82\udc8c \"$confirmation_title\" \"$confirmation\""
+  },
+  {
+    "sha": "7c58871428a971763c9e2f1d8f7556c5ed5718ff",
+    "filename": "manual/09-reminders.md",
+    "status": "modified",
+    "additions": 1,
+    "deletions": 1,
+    "changes": 2,
+    "blob_url": "https://github.com/omacom/omarchy/blob/994e798d4e9effcf78db431867ed12bc5c8e2646/manual%2F09-reminders.md",
+    "raw_url": "https://github.com/omacom/omarchy/raw/994e798d4e9effcf78db431867ed12bc5c8e2646/manual%2F09-reminders.md",
+    "contents_url": "https://api.github.com/repos/omacom/omarchy/contents/manual%2F09-reminders.md?ref=994e798d4e9effcf78db431867ed12bc5c8e2646",
+    "patch": "@@ -1,5 +1,5 @@\n # Reminders\n \n-Omarchy has a built-in way to set simple reminders based on a countdown timer and with a message. You can do this via `Super + Ctrl + R`, seeing all the ones set via `Super + Ctrl + Alt + R`, and clearing all via `Super + Ctrl + Shift + R`. Everything also accessible via _Trigger > Reminder_. You can also use the cli with `omarchy reminder 7 'Tea ready'`.\n+Omarchy has a built-in way to set simple reminders based on a countdown timer and with a message. When a reminder fires, its notification remains visible until you dismiss it. You can do this via `Super + Ctrl + R`, seeing all the ones set via `Super + Ctrl + Alt + R`, and clearing all via `Super + Ctrl + Shift + R`. Everything also accessible via _Trigger > Reminder_. You can also use the cli with `omarchy reminder 7 'Tea ready'`.\n \n  ![reminders](images/reminders.webp)"
+  },
+  {
+    "sha": "8cba43e86bcf9b391262f0ddfd0154cf9208eb5c",
+    "filename": "test/shell.d/reminders-test.sh",
+    "status": "modified",
+    "additions": 33,
+    "deletions": 0,
+    "changes": 33,
+    "blob_url": "https://github.com/omacom/omarchy/blob/994e798d4e9effcf78db431867ed12bc5c8e2646/test%2Fshell.d%2Freminders-test.sh",
+    "raw_url": "https://github.com/omacom/omarchy/raw/994e798d4e9effcf78db431867ed12bc5c8e2646/test%2Fshell.d%2Freminders-test.sh",
+    "contents_url": "https://api.github.com/repos/omacom/omarchy/contents/test%2Fshell.d%2Freminders-test.sh?ref=994e798d4e9effcf78db431867ed12bc5c8e2646",
+    "patch": "@@ -32,3 +32,36 @@ assertDeepEqual(\n   'reminders command args are empty for invalid minutes'\n )\n JS\n+\n+tmpdir=$(mktemp -d)\n+trap 'rm -rf \"$tmpdir\"' EXIT\n+\n+printf '%s\\n' \\\n+  '#!/bin/bash' \\\n+  'printf \"%s\\n\" \"$@\" >\"$OMARCHY_TEST_SYSTEMD_RUN_ARGS\"' \\\n+  >\"$tmpdir/systemd-run\"\n+chmod +x \"$tmpdir/systemd-run\"\n+\n+printf '%s\\n' '#!/bin/bash' 'exit 0' >\"$tmpdir/omarchy-notification-send\"\n+chmod +x \"$tmpdir/omarchy-notification-send\"\n+\n+printf '%s\\n' '#!/bin/bash' 'exit 0' >\"$tmpdir/omarchy-shell\"\n+chmod +x \"$tmpdir/omarchy-shell\"\n+\n+args_file=\"$tmpdir/systemd-run-args\"\n+OMARCHY_TEST_SYSTEMD_RUN_ARGS=\"$args_file\" \\\n+  PATH=\"$tmpdir:$ROOT/bin:$PATH\" \\\n+  XDG_RUNTIME_DIR=\"$tmpdir/runtime\" \\\n+  omarchy-reminder 5 \"Check the oven\"\n+\n+mapfile -t run_args <\"$args_file\"\n+timer_payload=\"\"\n+for ((i = 0; i < ${#run_args[@]}; i++)); do\n+  if [[ ${run_args[i]} == \"-c\" ]]; then\n+    timer_payload=${run_args[i + 1]}\n+    break\n+  fi\n+done\n+\n+[[ $timer_payload == *'omarchy-notification-send -g \udb82\udc8c \"Reminder\" \"$1\" -u critical'* ]] || fail \"reminders use a persistent critical notification\" \"$timer_payload\"\n+pass \"reminders use a persistent critical notification\""
+  }
+]

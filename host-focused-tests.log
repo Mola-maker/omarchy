@@ -1,0 +1,7 @@
+ok - two reminders in the same second both start
+ok - parallel reminders each start their own timer
+ok - each custom message belongs to its own timer and default messages do not collide
+ok - listing recognizes each unique timer and default-message label
+ok - failed timer creation leaves no reserved message file
+ok - clear removes unique reminder message files
+ok - clear stops every unique timer and service

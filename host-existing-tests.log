@@ -1,0 +1,9 @@
+ok - reminders accepts positive integer minutes
+ok - reminders trims minute input
+ok - reminders rejects zero minutes
+ok - reminders rejects negative minutes
+ok - reminders rejects fractional minutes
+ok - reminders rejects non-numeric minutes
+ok - reminders builds command args with message
+ok - reminders omits empty message arg
+ok - reminders command args are empty for invalid minutes

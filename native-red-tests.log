@@ -1,0 +1,7 @@
+Running as unit: run-p45796-i43318.service
+not ok - two reminders in the same second both start
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 26ms
+             CPU time consumed: 21ms
+                   Memory peak: 2.7M (swap: 0B)

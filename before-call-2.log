@@ -1,0 +1,25 @@
++ set -euo pipefail
++ case ${1:-} in
++ minutes=10
++ shift
++ message='Call mom'
++ custom_message='Call mom'
++ [[ -z 10 ]]
++ [[ ! 10 =~ ^[0-9]+$ ]]
++ (( minutes == 0 ))
++ [[ -z Call mom ]]
+++ date +%s
++ set_at=1791874762
+++ date -d '+10 minutes' +%H:%M
++ remind_at=07:09
++ unit=omarchy-reminder-10m-1791874762
++ reminder_dir=/run/user/1000/omarchy-reminders
++ message_file=/run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874762.message
++ confirmation='You'\''ll be reminded at 07:09'
++ confirmation_title='Reminder set for 10 minutes'
++ mkdir -p /run/user/1000/omarchy-reminders
++ [[ -n Call mom ]]
++ printf %s 'Call mom'
++ confirmation_title='Call mom in 10 minutes'
++ systemd-run --user --quiet --collect --on-active=10m --unit=omarchy-reminder-10m-1791874762 bash -c 'omarchy-notification-send -g 󰢌 "Reminder" "$1"; rm -f "$2"; omarchy-shell -q omarchy.indicators refresh >/dev/null 2>&1 || true' bash 'Call mom' /run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874762.message
+Failed to start transient timer unit: Unit omarchy-reminder-10m-1791874762.timer was already loaded or has a fragment file.

@@ -1,0 +1,13 @@
+Running as unit: run-p38492-i36407.service
+ok - two reminders in the same second both start
+ok - parallel reminders each start their own timer
+ok - each custom message belongs to its own timer and default messages do not collide
+ok - listing recognizes each unique timer and default-message label
+ok - failed timer creation leaves no reserved message file
+ok - clear removes unique reminder message files
+ok - clear stops every unique timer and service
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 414ms
+             CPU time consumed: 480ms
+                   Memory peak: 13.8M (swap: 0B)

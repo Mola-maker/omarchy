@@ -1,0 +1,59 @@
+{
+  "phase": "after",
+  "attempt": 1,
+  "calls": [
+    {
+      "message": "Check the oven",
+      "started": 1791874898.0401204,
+      "finished": 1791874898.1060343,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "+ set -euo pipefail\n+ case ${1:-} in\n+ minutes=10\n+ shift\n+ message='Check the oven'\n+ custom_message='Check the oven'\n+ [[ -z 10 ]]\n+ [[ ! 10 =~ ^[0-9]+$ ]]\n+ (( minutes == 0 ))\n+ [[ -z Check the oven ]]\n++ date +%s\n+ set_at=1791874898\n++ date -d '+10 minutes' +%H:%M\n+ remind_at=07:11\n+ reminder_dir=/run/user/1000/omarchy-reminders\n+ confirmation='You'\\''ll be reminded at 07:11'\n+ confirmation_title='Reminder set for 10 minutes'\n+ mkdir -p /run/user/1000/omarchy-reminders\n++ mktemp /run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874898-XXXXXX.message\n+ message_file=/run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874898-pijL43.message\n+ unit=omarchy-reminder-10m-1791874898-pijL43.message\n+ unit=omarchy-reminder-10m-1791874898-pijL43\n+ [[ -n Check the oven ]]\n+ printf %s 'Check the oven'\n+ confirmation_title='Check the oven in 10 minutes'\n+ systemd-run --user --quiet --collect --on-active=10m --unit=omarchy-reminder-10m-1791874898-pijL43 bash -c 'omarchy-notification-send -g \udb82\udc8c \"Reminder\" \"$1\"; rm -f \"$2\"; omarchy-shell -q omarchy.indicators refresh >/dev/null 2>&1 || true' bash 'Check the oven' /run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874898-pijL43.message\n+ refresh_indicator\n+ omarchy-shell -q omarchy.indicators refresh\n+ omarchy-notification-send -g \udb82\udc8c 'Check the oven in 10 minutes' 'You'\\''ll be reminded at 07:11'\n",
+      "set_at": "1791874898"
+    },
+    {
+      "message": "Call mom",
+      "started": 1791874898.1063335,
+      "finished": 1791874898.2201297,
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "+ set -euo pipefail\n+ case ${1:-} in\n+ minutes=10\n+ shift\n+ message='Call mom'\n+ custom_message='Call mom'\n+ [[ -z 10 ]]\n+ [[ ! 10 =~ ^[0-9]+$ ]]\n+ (( minutes == 0 ))\n+ [[ -z Call mom ]]\n++ date +%s\n+ set_at=1791874898\n++ date -d '+10 minutes' +%H:%M\n+ remind_at=07:11\n+ reminder_dir=/run/user/1000/omarchy-reminders\n+ confirmation='You'\\''ll be reminded at 07:11'\n+ confirmation_title='Reminder set for 10 minutes'\n+ mkdir -p /run/user/1000/omarchy-reminders\n++ mktemp /run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874898-XXXXXX.message\n+ message_file=/run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874898-PNNOow.message\n+ unit=omarchy-reminder-10m-1791874898-PNNOow.message\n+ unit=omarchy-reminder-10m-1791874898-PNNOow\n+ [[ -n Call mom ]]\n+ printf %s 'Call mom'\n+ confirmation_title='Call mom in 10 minutes'\n+ systemd-run --user --quiet --collect --on-active=10m --unit=omarchy-reminder-10m-1791874898-PNNOow bash -c 'omarchy-notification-send -g \udb82\udc8c \"Reminder\" \"$1\"; rm -f \"$2\"; omarchy-shell -q omarchy.indicators refresh >/dev/null 2>&1 || true' bash 'Call mom' /run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874898-PNNOow.message\n+ refresh_indicator\n+ omarchy-shell -q omarchy.indicators refresh\n+ omarchy-notification-send -g \udb82\udc8c 'Call mom in 10 minutes' 'You'\\''ll be reminded at 07:11'\n",
+      "set_at": "1791874898"
+    }
+  ],
+  "listing": {
+    "count": 2,
+    "active": true,
+    "tooltip": "2 reminders",
+    "reminders": [
+      {
+        "unit": "omarchy-reminder-10m-1791874898-pijL43",
+        "timer": "omarchy-reminder-10m-1791874898-pijL43.timer",
+        "minutes": 10,
+        "message": "Check the oven",
+        "label": "Check the oven",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875498,
+        "atTime": "7:11"
+      },
+      {
+        "unit": "omarchy-reminder-10m-1791874898-PNNOow",
+        "timer": "omarchy-reminder-10m-1791874898-PNNOow.timer",
+        "minutes": 10,
+        "message": "Call mom",
+        "label": "Call mom",
+        "remaining": "10m",
+        "remainingSeconds": 600,
+        "at": 1791875498,
+        "atTime": "7:11"
+      }
+    ]
+  },
+  "service_commands": {
+    "omarchy-reminder-10m-1791874898-pijL43": "ExecStart={ path=/usr/bin/bash ; argv[]=/usr/bin/bash -c omarchy-notification-send -g \udb82\udc8c \"Reminder\" \"$1\"; rm -f \"$2\"; omarchy-shell -q omarchy.indicators refresh >/dev/null 2>&1 || true bash Check the oven /run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874898-pijL43.message ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }\n",
+    "omarchy-reminder-10m-1791874898-PNNOow": "ExecStart={ path=/usr/bin/bash ; argv[]=/usr/bin/bash -c omarchy-notification-send -g \udb82\udc8c \"Reminder\" \"$1\"; rm -f \"$2\"; omarchy-shell -q omarchy.indicators refresh >/dev/null 2>&1 || true bash Call mom /run/user/1000/omarchy-reminders/omarchy-reminder-10m-1791874898-PNNOow.message ; ignore_errors=no ; start_time=[n/a] ; stop_time=[n/a] ; pid=0 ; code=(null) ; status=0/0 }\n"
+  },
+  "bash_version": "GNU bash, version 5.3.20(1)-release (x86_64-pc-linux-gnu)",
+  "systemd_version": "systemd 262 (262-1-arch)"
+}

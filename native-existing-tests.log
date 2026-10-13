@@ -1,0 +1,15 @@
+Running as unit: run-p40775-i41370.service
+ok - reminders accepts positive integer minutes
+ok - reminders trims minute input
+ok - reminders rejects zero minutes
+ok - reminders rejects negative minutes
+ok - reminders rejects fractional minutes
+ok - reminders rejects non-numeric minutes
+ok - reminders builds command args with message
+ok - reminders omits empty message arg
+ok - reminders command args are empty for invalid minutes
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 52ms
+             CPU time consumed: 38ms
+                   Memory peak: 30.4M (swap: 0B)
