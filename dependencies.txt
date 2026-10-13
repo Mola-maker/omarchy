@@ -1,0 +1,20 @@
+Machine ID: 3d12147924154d839acb960df6432268
+OMARCHY_PATH: /usr/share/omarchy
+Linux 7.2.8-5-omarchy-bore x86_64 GNU/Linux
+omarchy-dev 4.0.0.r6911.g9480d1b-1
+bash 5.3.20-1
+jq 1.8.2-1
+wl-clipboard 1:2.3.0-1
+wtype 0.4-2
+foot 1.28.0-2
+neovim 0.12.6-1
+gawk 5.4.1-1
+Node executable: /home/omarchy/.local/share/mise/shims/node
+v26.11.1
+node  26.11.1  ~/.config/mise/config.toml  latest
+/usr/bin/omasnap
+
+Source hashes:
+8776ea6da8601d69f48438fdb1f1d00d67e424792a00b0977bb4391633e09589  /home/omarchy/validation-clipboard/clipboard-open-original
+2909e715358db4fbafa0ba62d619145713be84afa44ff707299c66fb9d0c166b  /home/omarchy/validation-clipboard/clipboard-open-candidate
+2909e715358db4fbafa0ba62d619145713be84afa44ff707299c66fb9d0c166b  /usr/share/omarchy/bin/omarchy-clipboard-open

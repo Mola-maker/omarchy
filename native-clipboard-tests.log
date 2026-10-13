@@ -1,0 +1,89 @@
+ok - clipboard normalizes string entries
+ok - clipboard normalizes image entries with default mime
+ok - clipboard keeps image capture timestamps
+ok - clipboard history parser drops invalid entries
+ok - clipboard history parser drops whitespace-only text
+ok - clipboard addEntry moves duplicate text to front
+ok - clipboard removeEntryAt removes the requested entry
+ok - clipboard removeEntryAt ignores invalid indexes
+ok - clipboard clearHistory returns an empty history
+ok - clipboard display rows search image metadata
+ok - clipboard labels timestamped png image entries as screenshots
+ok - clipboard labels timestamped non-png image entries as images
+ok - clipboard display rows preserve original history indexes
+ok - clipboard display rows collapse text whitespace
+ok - clipboard display rows show file uri entries as files
+ok - clipboard display rows summarize multiple file uri entries
+ok - clipboard display rows do not preview video file uri entries inline
+ok - clipboard display rows supports zero result limit
+ok - clipboard addEntry supports zero history limit
+ok - clipboard keyboard navigation disarms pointer selection
+ok - clipboard absolute navigation disarms pointer selection
+ok - clipboard Home selects the first entry
+ok - clipboard End selects the last entry
+ok - clipboard uses shared pointer movement gate in card coordinates
+ok - clipboard resets pointer movement gate when pointer selection is disarmed
+ok - clipboard only selects from pointer after real movement
+ok - clipboard row hover routes through pointer movement gate
+ok - clipboard does not select rows from containsMouse
+ok - clipboard text watcher dies with the shell via pdeathsig
+ok - clipboard image watcher dies with the shell via pdeathsig
+ok - clipboard init reaps stale watchers before starting new ones
+ok - clipboard respawns both watchers when they die
+ok - clipboard display rows do not search text past the cap
+ok - clipboard display rows search text up to the cap
+ok - clipboard display rows cap what a huge text entry renders
+ok - clipboard display rows cap a huge file list without truncating a path
+ok - clipboard capture records normal text events
+ok - clipboard capture records watched text from stdin
+ok - clipboard watched text survives a stalled type query
+ok - clipboard watched text remains intact after a stalled type query
+ok - clipboard snapshot text read uses its internal timeout
+ok - clipboard snapshot timeout emits no partial entry
+ok - clipboard snapshot text read stalled midway uses its internal timeout
+ok - clipboard snapshot stalled midway emits no partial entry
+ok - clipboard watched text read is bounded when the owner stalls
+ok - clipboard watched text cut off by a stalled owner emits no entry
+ok - clipboard watched image/png read is bounded when the owner stalls
+ok - clipboard watched image/png cut off by a stalled owner emits no entry
+ok - clipboard capture removes copies it dropped
+ok - clipboard capture decodes UTF-16LE text
+ok - clipboard capture decodes mostly ASCII UTF-16LE text with Unicode punctuation
+ok - clipboard capture decodes mostly ASCII UTF-16BE text with Unicode characters
+ok - clipboard capture decodes UTF-16LE text at the padding threshold
+ok - clipboard capture leaves UTF-16LE text below the padding threshold undecoded
+ok - clipboard capture leaves UTF-16LE text at the opposite-byte NUL threshold undecoded
+ok - clipboard capture preserves UTF-16LE form feeds
+ok - clipboard capture decodes exact NUL-padded UTF-16LE text
+ok - clipboard capture decodes exact NUL-padded UTF-16BE text
+ok - clipboard capture decodes BOM-tagged UTF-16LE text
+ok - clipboard capture decodes BOM-tagged UTF-16BE text
+ok - clipboard capture leaves BOM-less UTF-16 punctuation undecoded
+ok - clipboard capture leaves BOM-less UTF-16 CJK undecoded
+ok - clipboard capture leaves BOM-less UTF-16 surrogate pairs undecoded
+ok - clipboard capture leaves sparse NUL-separated UTF-8 undecoded
+ok - clipboard capture leaves NUL-padded UTF-8 undecoded
+ok - clipboard capture leaves endian-ambiguous control text undecoded
+ok - clipboard capture falls back from malformed UTF-16
+ok - clipboard capture records watched png images
+ok - clipboard capture stores watched jpeg images with jpg extension
+ok - clipboard capture ignores sensitive watched text
+ok - clipboard capture ignores sensitive clipboard events
+ok - clipboard capture ignores password manager hint
+ok - clipboard reaper pattern matches running watchers
+ok - clipboard watcher dies with its owner via pdeathsig
+ok - clipboard paste helper copies history entry text
+ok - clipboard paste helper pastes history entries with shift insert
+ok - clipboard paste helper copy-only copies history entry text
+ok - clipboard paste helper copy-only skips typing
+ok - clipboard file paste helper copy-only copies file content
+ok - clipboard file paste helper copy-only skips paste keystroke
+ok - clipboard open helper opens URL entries in browser
+ok - clipboard open helper opens text entries in editor
+ok - clipboard open helper writes text entries to a temporary file
+ok - clipboard open helper preserves none text byte for byte
+ok - clipboard open helper preserves newline text byte for byte
+ok - clipboard open helper preserves blank-lines text byte for byte
+ok - clipboard open helper preserves crlf text byte for byte
+ok - clipboard open helper preserves unicode text byte for byte
+ok - clipboard open helper opens image entries in Omasnap

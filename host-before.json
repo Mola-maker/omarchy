@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "expected_bytes": 25,
+  "actual_bytes": 22,
+  "expected": "b'First line\\nSecond line\\n\\n\\n'",
+  "actual": "b'First line\\nSecond line'",
+  "identical": false
+}

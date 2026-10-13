@@ -1,0 +1,14 @@
+{
+  "base_commit": "f5006bd41a1755d46e0a4f2c0c4c54fca703cd9b",
+  "host_clipboard_assertions": 89,
+  "native_clipboard_assertions": 89,
+  "host_cli_assertions": 125,
+  "expected_bytes": 25,
+  "before_bytes": 22,
+  "after_bytes": 25,
+  "real_history_preserved": true,
+  "before_identical": false,
+  "after_identical": true,
+  "candidate_source_sha256": "2909e715358db4fbafa0ba62d619145713be84afa44ff707299c66fb9d0c166b",
+  "official_image_sha256": "7ed0bd351861bce80c43434a9fb48fe6058dc12dbdb0bde2b14e59d7fe9d4110"
+}

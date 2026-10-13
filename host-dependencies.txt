@@ -1,0 +1,6 @@
+Ubuntu host dependency versions (gawk installed in an isolated prefix):
+bash --version: GNU bash, version 5.3.9(1)-release (x86_64-pc-linux-gnu)
+jq --version: jq-1.8.1
+node --version: v24.1.0
+python3 --version: Python 3.14.4
+/home/jlu/Documents/Codex/2026-10-12/new-chat/work/deps/omarchy/bin/awk --version: GNU Awk 5.3.2, API 4.0, PMA Avon 8-g1, (GNU MPFR 4.2.2, GNU MP 6.3.0)

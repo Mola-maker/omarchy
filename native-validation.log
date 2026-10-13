@@ -1,0 +1,22 @@
+Real Wayland clipboard capture and Alt+Enter native editor launch
+Expected: 25
+Captured history: 25
+Original editor file: 22
+Fixed editor file: 25
+
+Original editor file bytes:
+ 46 69 72 73 74 20 6c 69 6e 65 0a 53 65 63 6f 6e
+ 64 20 6c 69 6e 65
+
+Fixed editor file bytes:
+ 46 69 72 73 74 20 6c 69 6e 65 0a 53 65 63 6f 6e
+ 64 20 6c 69 6e 65 0a 0a 0a
+
+SHA256 of text files:
+28b24a57b4c0f1f784278de2bcc098600852c107985cd09c986f7206d4ec89c2  /home/omarchy/validation-clipboard/expected.txt
+28b24a57b4c0f1f784278de2bcc098600852c107985cd09c986f7206d4ec89c2  /home/omarchy/validation-clipboard/captured.txt
+4e8e15379de9fe002455b64e6151cdfad38d0b9512a05fc32205a0ce86bea308  /home/omarchy/validation-clipboard/before.txt
+28b24a57b4c0f1f784278de2bcc098600852c107985cd09c986f7206d4ec89c2  /home/omarchy/validation-clipboard/after.txt
+
+Final native editor window:
+[{"class":"org.omarchy.nvim","title":"foot","pid":77910,"address":"0x563d4fe25650"}]

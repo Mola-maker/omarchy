@@ -1,0 +1,180 @@
+{
+  "queries": {
+    "clipboard-final-trailing-prs.json": {
+      "count": 14,
+      "items": [
+        {
+          "number": 15187,
+          "title": "Add persistent clipboard pins",
+          "url": "https://github.com/omacom/omarchy/pull/15187"
+        },
+        {
+          "number": 13706,
+          "title": "Avoid sentence-ending periods in clipboard links",
+          "url": "https://github.com/omacom/omarchy/pull/13706"
+        },
+        {
+          "number": 14919,
+          "title": "Bound clipboard history and safely collect removed captures",
+          "url": "https://github.com/omacom/omarchy/pull/14919"
+        },
+        {
+          "number": 8343,
+          "title": "Fix omarchy share clipboard sending an empty file for image clipboard content",
+          "url": "https://github.com/omacom/omarchy/pull/8343"
+        },
+        {
+          "number": 14224,
+          "title": "Clipboard: paste the entry you picked, not the one that replaced it",
+          "url": "https://github.com/omacom/omarchy/pull/14224"
+        },
+        {
+          "number": 12801,
+          "title": "Explicitly set text/plain UTF-8 MIME type in omarchy-clipboard-paste-text",
+          "url": "https://github.com/omacom/omarchy/pull/12801"
+        },
+        {
+          "number": 7381,
+          "title": "fix: sanitize clipboard and notification HTML to prevent Qt6 StyledText crash",
+          "url": "https://github.com/omacom/omarchy/pull/7381"
+        },
+        {
+          "number": 10294,
+          "title": "feat(menu): inline calculator in search",
+          "url": "https://github.com/omacom/omarchy/pull/10294"
+        },
+        {
+          "number": 13277,
+          "title": "Copy About details as plain text for bug reports",
+          "url": "https://github.com/omacom/omarchy/pull/13277"
+        },
+        {
+          "number": 7417,
+          "title": "Add NetBird mesh VPN integration",
+          "url": "https://github.com/omacom/omarchy/pull/7417"
+        },
+        {
+          "number": 15087,
+          "title": "Add the agent seat: sandboxed apps with the agent's own pointer and keyboard",
+          "url": "https://github.com/omacom/omarchy/pull/15087"
+        },
+        {
+          "number": 13272,
+          "title": "Add Cloudflare bar panel",
+          "url": "https://github.com/omacom/omarchy/pull/13272"
+        },
+        {
+          "number": 12568,
+          "title": "Make the Bluetooth device list navigable while a scan is running",
+          "url": "https://github.com/omacom/omarchy/pull/12568"
+        },
+        {
+          "number": 12258,
+          "title": "Keep the screensaver up until it has been focused once",
+          "url": "https://github.com/omacom/omarchy/pull/12258"
+        }
+      ]
+    },
+    "clipboard-final-newline-prs.json": {
+      "count": 16,
+      "items": [
+        {
+          "number": 15187,
+          "title": "Add persistent clipboard pins",
+          "url": "https://github.com/omacom/omarchy/pull/15187"
+        },
+        {
+          "number": 15137,
+          "title": "Copy clipboard history text as text/plain",
+          "url": "https://github.com/omacom/omarchy/pull/15137"
+        },
+        {
+          "number": 8343,
+          "title": "Fix omarchy share clipboard sending an empty file for image clipboard content",
+          "url": "https://github.com/omacom/omarchy/pull/8343"
+        },
+        {
+          "number": 14919,
+          "title": "Bound clipboard history and safely collect removed captures",
+          "url": "https://github.com/omacom/omarchy/pull/14919"
+        },
+        {
+          "number": 14760,
+          "title": "Add ordered multi-selection to clipboard history",
+          "url": "https://github.com/omacom/omarchy/pull/14760"
+        },
+        {
+          "number": 14903,
+          "title": "Stop Ghostty toasts on theme changes and clipboard copies",
+          "url": "https://github.com/omacom/omarchy/pull/14903"
+        },
+        {
+          "number": 13360,
+          "title": "Encode transcode clipboard file URIs",
+          "url": "https://github.com/omacom/omarchy/pull/13360"
+        },
+        {
+          "number": 14224,
+          "title": "Clipboard: paste the entry you picked, not the one that replaced it",
+          "url": "https://github.com/omacom/omarchy/pull/14224"
+        },
+        {
+          "number": 11701,
+          "title": "Type clipboard history as keystrokes with Ctrl+Enter",
+          "url": "https://github.com/omacom/omarchy/pull/11701"
+        },
+        {
+          "number": 12801,
+          "title": "Explicitly set text/plain UTF-8 MIME type in omarchy-clipboard-paste-text",
+          "url": "https://github.com/omacom/omarchy/pull/12801"
+        },
+        {
+          "number": 6761,
+          "title": "Keep tmux clipboard copies working over mosh",
+          "url": "https://github.com/omacom/omarchy/pull/6761"
+        },
+        {
+          "number": 13980,
+          "title": "Add calculator to the menu launcher",
+          "url": "https://github.com/omacom/omarchy/pull/13980"
+        },
+        {
+          "number": 11920,
+          "title": "Bound clipboard history bytes and keep large copies as files",
+          "url": "https://github.com/omacom/omarchy/pull/11920"
+        },
+        {
+          "number": 13277,
+          "title": "Copy About details as plain text for bug reports",
+          "url": "https://github.com/omacom/omarchy/pull/13277"
+        },
+        {
+          "number": 7417,
+          "title": "Add NetBird mesh VPN integration",
+          "url": "https://github.com/omacom/omarchy/pull/7417"
+        },
+        {
+          "number": 12557,
+          "title": "Give binds a stable id to key on",
+          "url": "https://github.com/omacom/omarchy/pull/12557"
+        }
+      ]
+    }
+  },
+  "open_helper_patches_reviewed": [
+    14224,
+    11920,
+    15187,
+    14919,
+    13706,
+    15137
+  ],
+  "additional_patches_no_open_helper_changes": [
+    14760,
+    13360,
+    11701,
+    7381,
+    8343
+  ],
+  "matching_fix_found": false
+}
