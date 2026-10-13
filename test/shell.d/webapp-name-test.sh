@@ -23,6 +23,11 @@ run_remove() {
     "$ROOT/bin/omarchy-webapp-remove" "$@"
 }
 
+run_remove_all() {
+  HOME="$tmp_dir/home" PATH="$tmp_dir/bin:$ROOT/bin:$PATH" \
+    "$ROOT/bin/omarchy-webapp-remove-all" "$@"
+}
+
 apps_dir="$tmp_dir/home/.local/share/applications"
 icons_dir="$tmp_dir/home/.local/share/icons/hicolor/256x256/apps"
 
@@ -156,4 +161,25 @@ for extension in png svg xpm; do
   cmp -s "$tmp_dir/icon.$extension" "$backup" ||
     fail "webapp remove preserves the $extension icon backup"
   pass "webapp remove cleans up its local $extension icon and preserves neighboring icons and backups"
+done
+
+# Bulk removal must clean up the same formats and leave ordinary launchers alone.
+printf '%s\n' '[Desktop Entry]' 'Name=Unrelated App' 'Exec=foot' 'Type=Application' >"$tmp_dir/unrelated.desktop"
+cp "$tmp_dir/unrelated.desktop" "$apps_dir/Unrelated App.desktop"
+for extension in png svg xpm; do
+  run_install "Local $extension" "https://example.com" "$tmp_dir/icon.$extension" >/dev/null
+done
+run_remove_all "$apps_dir" >/dev/null
+cmp -s "$tmp_dir/unrelated.desktop" "$apps_dir/Unrelated App.desktop" ||
+  fail "webapp remove-all preserves an ordinary launcher"
+for extension in png svg xpm; do
+  app_name="Local $extension"
+  icon_file="$icons_dir/local-$extension.$extension"
+  [[ ! -e $icon_file ]] || fail "webapp remove-all deletes its local $extension icon"
+  [[ ! -e $apps_dir/$app_name.desktop ]] || fail "webapp remove-all deletes the $extension launcher"
+  cmp -s "$tmp_dir/icon.$extension" "$icons_dir/local-$extension-other.$extension" ||
+    fail "webapp remove-all preserves a neighboring $extension icon"
+  cmp -s "$tmp_dir/icon.$extension" "$icon_file.bak" ||
+    fail "webapp remove-all preserves the $extension icon backup"
+  pass "webapp remove-all cleans up its local $extension icon and preserves neighboring icons and backups"
 done
