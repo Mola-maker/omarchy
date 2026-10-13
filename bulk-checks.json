@@ -1,0 +1,16 @@
+{
+  "source_commit": "53a334e60398929506f9a8e7801330cd5c00ba06",
+  "previous_commit": "28d84db99a532f7a67b821c63564ccc84b24c366",
+  "vm_image": "2026.10.12.442",
+  "guest_machine_id": "2585c07c50bf431d9e5da27d6c9db661",
+  "candidate_sha256": "ac64fefac301fd107eb61a1c567ad047e02f4bd780671eda9b4830456bb40c02",
+  "original_sha256": "e6818189c504fa56211405b2db6e670c7f497d6efcffc884f73d34fa9860e289",
+  "focused_assertions": 26,
+  "cli_assertions": 117,
+  "before_orphan_icons": 2,
+  "after_orphan_icons": 0,
+  "screenshots": {
+    "bulk-before.png": "9c00739f8236731c6c671be8c41bc6e905915a4fb085571c7eadc8adf9d194da",
+    "bulk-after.png": "2c97cd1805068bc152c3349769d20b591b0777689e3f296c5c50502aaae92f77"
+  }
+}

@@ -1,0 +1,121 @@
+ok - main help renders
+ok - main help includes hardware group
+ok - main help includes package group
+ok - main help does not show group counts
+ok - commands lists documented commands
+ok - commands --json is valid JSON with full bin coverage
+ok - all included commands have summaries
+ok - JSON uses binary/routes and omits legacy/usage/extra metadata
+ok - commands --check passes
+ok - commands --all does not crash
+ok - fallback commands are inferred and documented
+ok - benchmark command is discoverable in all commands
+ok - JSON exposes direct pkg add route
+ok - Xbox Cloud installer keeps hyphenated canonical route
+ok - Xbox controller installer keeps hyphenated canonical route
+ok - Xbox controller remover keeps hyphenated canonical route
+ok - GeForce NOW installer keeps hyphenated canonical route
+ok - GeForce NOW remover keeps hyphenated canonical route
+ok - GPU lib32 installer keeps hyphenated canonical route
+ok - sudo metadata marks sudo commands
+ok - group help renders
+ok - install group help renders
+ok - install group includes browser route
+ok - bare group renders help instead of picker
+ok - bare group includes browser route
+ok - bare root command with children renders help
+ok - bare toggle help includes child route
+ok - package group includes pkg add fallback route
+ok - restart group includes inferred commands
+ok - restart group includes all restart commands
+ok - hardware group help renders
+ok - hardware group includes touchpad
+ok - partial hardware prefix renders matching commands
+ok - partial hardware prefix includes nested match
+ok - a family under a flags-only command renders its commands
+ok - a family under a flags-only command renders its help
+ok - the flags-only command keeps its own help
+ok - menu group includes share fallback route
+ok - bare required-arg alias renders CLI help
+ok - bare share help uses canonical route
+ok - bare required-arg filename route renders CLI help
+ok - every filename-derived group help represents its bins
+ok - command help renders without executing
+ok - theme set help names binary
+ok - mutating command help does not execute target
+ok - hidden update perform compatibility wrapper is not shown
+ok - a group whose commands are all hidden stays out of the top-level listing
+ok - install-time setup plumbing is hidden from the setup wizards
+ok - hidden setup plumbing still routes
+ok - root alias resolves to command help
+ok - aliases are included in JSON metadata
+ok - pkg add help resolves
+ok - pkg add help shows direct route
+ok - system command help is safe
+ok - benchmark command runs
+find: ‘/home/jlu/.config/omarchy/themes/’: No such file or directory
+ok - safe dispatch works for theme list
+ok - safe dispatch works for theme current
+ok - safe dispatch works for font list
+ok - safe dispatch works for font current
+ok - theme template color mix helpers work
+ok - theme template semantic aliases expose legacy palette helpers
+ok - legacy short palette resolves every canonical neutral color
+ok - legacy short palette renders the complete generated theme
+ok - theme OSC aliases semantic colors to ANSI palette
+ok - theme preview shows background to bright_foreground gradient
+ok - theme preview orders light mode ramp light to dark
+ok - theme preview includes dark background slots
+ok - theme preview shows selected text sample
+ok - theme preview shows practical terminal samples
+ok - theme preview shows ANSI palette strips
+ok - tokyo night foreground ramp stays ordered
+ok - built-in colors.toml files omit cursor token
+ok - theme template gradient helpers work
+ok - theme shell section override is merged
+ok - pi theme template is generated from standard themed templates
+ok - theme-specific pi.json overrides the default template
+ok - pi theme sync skips missing Pi agent when not activating
+ok - pi theme file is synced
+ok - pi settings file is generated
+ok - pi synced theme JSON is valid
+ok - pi generated theme is activated
+ok - pi theme activation preserves existing settings
+ok - claude theme template is generated from standard themed templates
+ok - claude theme sync respects CLAUDE_CONFIG_DIR
+ok - claude theme activation preserves configured settings
+/home/jlu/Documents/Codex/2026-10-12/new-chat/work/repos/omarchy/bin/omarchy-theme-set: line 386: /run/user/1000/omarchy-theme-set.lock: Read-only file system
+flock: 9: Bad file descriptor
+flock: 9: Bad file descriptor
+ok - headless theme set creates current background symlink
+ok - tmux sync reads mode from colors.toml
+ok - hunk sync signals running hunk sessions
+ok - hunk sync skips signaling without running hunk
+ok - gnome sync reads mode from colors.toml
+ok - vscode generated light theme uses VS Code light uiTheme
+ok - vscode generated theme contains a copy of the current palette
+ok - vscode generated theme clears obsolete extension marker
+ok - vscode generated theme registers local extension
+ok - binary is executable: omarchy-update
+ok - binary is executable: omarchy-theme-set
+ok - binary is executable: omarchy-capture-screenshot
+ok - binary is executable: omarchy-system-reboot
+ok - binary is executable: omarchy-pkg-add
+ok - all executable bins have slim self-documenting metadata
+ok - unknown metadata values are non-fatal
+ok - partial metadata keeps inferred fallback route
+ok - metadata-looking comments after script body are ignored
+ok - temporary metadata command dispatches
+ok - partial metadata command dispatches
+ok - body metadata command dispatches by filename
+ok - trailing --help after an unresolved word renders help
+ok - partial resolution help lists related commands
+ok - trailing --help after an unresolved word does not execute the command
+ok - trailing -h after an unresolved word renders help
+ok - trailing --help after an unresolved word renders help via alias route
+ok - trailing --help on an alias route does not execute the command
+ok - --json with --help renders JSON help
+ok - a --json embedded inside one argument does not switch help to JSON
+ok - leftover args without a help flag still forward
+ok - a --help behind -- belongs to the command and still forwards
+ok - help lookalike tokens do not trigger help

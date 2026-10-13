@@ -1,0 +1,17 @@
+Omarchy BULK web app icon cleanup: BEFORE
+Kernel: 7.2.8-5-omarchy-bore
+omarchy-dev 4.0.0.r6911.g9480d1b-1
+gtk3 1:3.24.52-2
+desktop-file-utils 0.28-1
+
+Real installer + remove-all, no command stubs
+Scanning for web apps in /home/omarchy/validation-bulk/applications...
+Removing web app: Omarchy Bulk Icon Check png
+Removing web app: Omarchy Bulk Icon Check svg
+Removing web app: Omarchy Bulk Icon Check xpm
+Web apps removed successfully.
+PNG: launcher removed; icon removed; controls preserved
+SVG: launcher removed; ICON LEFT BEHIND; controls preserved
+XPM: launcher removed; ICON LEFT BEHIND; controls preserved
+Ordinary launcher, neighboring icons and backups: preserved
+Orphaned app icons: 2

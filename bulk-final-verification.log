@@ -1,0 +1,27 @@
+ok - webapp install rejects a name that would nest the launcher
+ok - webapp install refuses a name that would escape the applications directory
+ok - webapp install refuses a slashed name before fetching its icon
+ok - webapp install and remove round-trip an ordinary name
+ok - webapp remove reaches a nested legacy launcher
+ok - webapp remove stays quiet when there is no applications directory
+ok - webapp remove cleans up its local png icon and preserves neighboring icons and backups
+ok - webapp remove cleans up its local svg icon and preserves neighboring icons and backups
+ok - webapp remove cleans up its local xpm icon and preserves neighboring icons and backups
+ok - webapp remove-all cleans up its local png icon and preserves neighboring icons and backups
+ok - webapp remove-all cleans up its local svg icon and preserves neighboring icons and backups
+ok - webapp remove-all cleans up its local xpm icon and preserves neighboring icons and backups
+ok - webapp install writes an https desktop entry
+ok - webapp install names the window Chromium opens, so titlebars can show the app's name
+ok - web app window classes follow Chromium's host and path naming
+ok - webapp install prefixes a schemeless URL with https
+ok - webapp install keeps a custom https exec
+ok - webapp install refuses non-http(s) URLs
+ok - webapp install refuses a URL carrying whitespace
+ok - webapp install accepts an uppercase http scheme
+ok - interactive webapp install refuses a bad URL before fetching it
+ok - Exec escapes the backslash its own quoting introduced
+ok - a URL containing a dollar sign reaches the browser unchanged
+ok - a percent-encoded URL reaches the browser unchanged
+ok - a backslash in the app name is escaped
+ok - a newline in the app name cannot inject a second Exec
+Command metadata check passed (509 commands)

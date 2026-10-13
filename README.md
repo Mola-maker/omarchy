@@ -38,3 +38,13 @@ The whole repository suite is not claimed green. The initial Ubuntu baseline enc
 Host paths in text logs are normalized. Screenshots and runtime results are not edited.
 
 Candidate source commit: `28d84db99a532f7a67b821c63564ccc84b24c366`.
+
+## Bulk removal follow-up (2026-10-13)
+
+The same cleanup is now applied to `omarchy-webapp-remove-all` in the existing PR. The original bulk remover also leaves two SVG/XPM icons; the candidate leaves zero. Native checks preserve an ordinary launcher, neighboring icons and same-stem backups. See `bulk-checks.json`, `bulk-runtime-before.log`, `bulk-runtime-after.log`, and `verify-bulk-icons.sh`.
+
+Focused web app checks: 26 assertions passed; complete CLI: 117 assertions passed. Independent read-only AI review found no blocking issue. Candidate source commit: `53a334e60398929506f9a8e7801330cd5c00ba06`.
+
+![Original bulk remover leaves two icons](bulk-before.png)
+
+![Candidate bulk remover leaves zero icons](bulk-after.png)
