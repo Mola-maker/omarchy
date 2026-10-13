@@ -37,3 +37,5 @@ Open PR search for the command returned 15 PRs. Inspected actual patches for rem
 Two one-minute real timers also fired naturally after 61.5 seconds. D-Bus notification bodies were exactly `Native firing verification` and `Your 1 minutes are up`; both reserved message files were removed and active count became zero. See firing.json/native-firing.log.
 
 The initial concurrent run log records an additional real reproduction: one timer was rejected. The deterministic sequential same-second run shown in before.png is recorded by before.json and before-call-1.log/before-call-2.log, and demonstrates message overwrite as well.
+
+Review follow-up: commit `04b012f6e17b047a7a5e0bb0a3c7b2432c2cc589` updates docs/notifications.md with `<epoch>-<random>` and the atomic reservation explanation. The runtime file still matches the native-tested hash. Final PR now changes three files including documentation; original screenshot and runtime evidence is unchanged. See final-fix.patch and review-followup.json.

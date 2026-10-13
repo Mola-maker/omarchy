@@ -1,0 +1,6 @@
+{
+  "head": "04b012f6e17b047a7a5e0bb0a3c7b2432c2cc589",
+  "review_comment": "Documented timer names are incomplete",
+  "resolution": "docs/notifications.md now documents <epoch>-<random> and atomic reservation; runtime unchanged",
+  "runtime_sha256": "ece29338beeab2481e5617ed97ed83c2ede17cbb21234844651504f65269ed4f"
+}
